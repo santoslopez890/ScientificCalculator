@@ -48,7 +48,7 @@ public class Scientific {
         }
 
     }
-    public double inversesine(double userInput, boolean rad) {
+    public double inverseSine(double userInput, boolean rad) {
         double result = 0;
         if (rad == true) {
             result = Math.toRadians(userInput);
@@ -59,7 +59,7 @@ public class Scientific {
             return Math.asin(result);
         }
     }
-    public double inversecosine(double userInput, boolean rad) {
+    public double inverseCosine(double userInput, boolean rad) {
         double result = 0;
         if (rad == true) {
             result = Math.toRadians(userInput);
@@ -71,11 +71,11 @@ public class Scientific {
         }
 
     }
-    public double inversetan(double userInput, boolean rad) {
+    public double inverseTan(double userInput, boolean rad) {
         double result = 0;
         if (rad == true) {
             result = Math.toRadians(userInput);
-            return Math.tan(result);
+            return Math.atan(result);
         }
         else{
             result =Math.toDegrees(userInput);
