@@ -23,10 +23,66 @@ public class Scientific {
             return Math.sin(result);
         }
     }
+    public double cosine(double userInput, boolean rad) {
+        double result = 0;
+        if (rad == true) {
+            result = Math.toRadians(userInput);
+            return Math.cos(result);
+        }
+        else{
+            result =Math.toDegrees(userInput);
+            return Math.cos(result);
+        }
 
+    }
 
+    public double tan(double userInput, boolean rad) {
+        double result = 0;
+        if (rad == true) {
+            result = Math.toRadians(userInput);
+            return Math.tan(result);
+        }
+        else{
+            result =Math.toDegrees(userInput);
+            return Math.tan(result);
+        }
 
+    }
+    public double inversesine(double userInput, boolean rad) {
+        double result = 0;
+        if (rad == true) {
+            result = Math.toRadians(userInput);
+            return Math.asin(result);
+        }
+        else{
+            result =Math.toDegrees(userInput);
+            return Math.asin(result);
+        }
+    }
+    public double inversecosine(double userInput, boolean rad) {
+        double result = 0;
+        if (rad == true) {
+            result = Math.toRadians(userInput);
+            return Math.acos(result);
+        }
+        else{
+            result =Math.toDegrees(userInput);
+            return Math.acos(result);
+        }
 
+    }
+    public double inversetan(double userInput, boolean rad) {
+        double result = 0;
+        if (rad == true) {
+            result = Math.toRadians(userInput);
+            return Math.tan(result);
+        }
+        else{
+            result =Math.toDegrees(userInput);
+            return Math.atan(result);
+        }
+
+    }
 
 
 
