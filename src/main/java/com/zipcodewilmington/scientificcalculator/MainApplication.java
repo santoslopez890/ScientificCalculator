@@ -1,18 +1,44 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.util.Scanner;
+
 /**
  * Created by leon on 2/9/18.
  */
 public class MainApplication {
     public static void main(String[] args) {
-        Console.println("Welcome to my calculator!");
-        String s = Console.getStringInput("Enter a string");
-        Integer i = Console.getIntegerInput("Enter an integer");
-        Double d = Console.getDoubleInput("Enter a double.");
+        runMain();
+        }
+        public static void runMain(){
+            Console.println("Welcome to our calculator!");
+            char operator;
+            Double number1, number2, result;
 
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a d", d);
+            // create an object of Scanner class to get input from user
+            Scanner input = new Scanner(System.in);
+
+            // ask users to enter operator
+            System.out.println("Choose an operator: 1 for core features, 2 for scientific, 3 for special,");
+            operator = input.next().charAt(0);
+            switch (operator) {
+
+                // operator addition for both numbers
+                case '1':
+                    CoreMethods core=new CoreMethods();
+                    core.run();
+                    break;
+                case '2':
+                    Scientific science=new Scientific();
+                    science.runScientfic();
+                    break;
+                case '3':
+                    break;
+                default:
+                    System.out.println("Invalid operator!");
+                    break;
+            }
+
+        }
     }
 
-}
+
