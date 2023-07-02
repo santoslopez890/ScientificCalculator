@@ -7,7 +7,19 @@ public class Scientific {
     public static void main(String[] args) {
         Console.println("Welcome to my calculator!");
 
+        sine(50, radTrueOrFalse);
+        System.out.println(displayvalue);
 
+        sine(50, changeRad());
+        System.out.println(displayvalue);
+        sine(50, changeRad());
+
+        System.out.println(displayvalue);
+        cosine(50, changeRad());
+        System.out.println(displayvalue);
+        cosine(50, changeRad());
+        System.out.println(displayvalue);
+        System.out.println(displayvalue);
 
 
     }
@@ -94,26 +106,56 @@ public static void runScientfic () {
                 cosine(number1,radTrueOrFalse);
                 break;
             case 9:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                tan(number1,radTrueOrFalse);
                 break;
             case 10:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                inverseSine(number1,radTrueOrFalse);
                 break;
             case 11:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                inverseCosine(number1,radTrueOrFalse);
                 break;
             case 12:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                inverseTan(number1,radTrueOrFalse);
                 break;
             case 13:
+                changeRad();
                 break;
             case 14:
+
+
                 break;
             case 15:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                log(number1);
                 break;
             case 16:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                inverseLog(number1);
                 break;
             case 17:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                ln(number1);
                 break;
             case 18:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                inverseNaturalLog(number1);
                 break;
             case 19:
+                System.out.println("Choose first number");
+                number1 = input2.nextDouble();
+                factorial(number1);
                 break;
 
             default:
@@ -252,9 +294,9 @@ public static boolean radTrueOrFalse = true;
         return result;
     }
 
-    public static double factorial(int userInput) {
+    public static double factorial(double userInput) {
 
-        int fact = userInput;
+        double fact = userInput;
         for (int i = 1; i <= fact; i++) {
             fact = fact * i;
 
