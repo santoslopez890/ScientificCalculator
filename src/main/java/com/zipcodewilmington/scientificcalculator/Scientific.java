@@ -12,7 +12,7 @@ public class Scientific {
       //  Console.println("The user input %s as a string", s);
      //   Console.println("The user input %s as a integer", i);
      //   Console.println("The user input %s as a d", d);
-        //testing funcions
+        //testing functions
         boolean radTrueOrFalse = getInputRad();
         double answer = inverseTan(50,radTrueOrFalse);
         System.out.println(answer);
