@@ -5,39 +5,11 @@ import java.util.Scanner;
 public class Scientific {
 
     public static void main(String[] args) {
-        Console.println("Welcome to my calculator!");
-
-        sine(50, radTrueOrFalse);
-        System.out.println(displayvalue);
-
-        sine(50, changeRad());
-        System.out.println(displayvalue);
-        sine(50, changeRad());
-
-        System.out.println(displayvalue);
-        cosine(50, changeRad());
-        System.out.println(displayvalue);
-        cosine(50, changeRad());
-        System.out.println(displayvalue);
-        System.out.println(displayvalue);
-
 
     }
 public static void runScientfic () {
     Console.println("Welcome to our calculator!");
-    /*sine(50, radTrueOrFalse);
-    System.out.println(displayvalue);
-    sine(50, changeRad());
-    System.out.println(displayvalue);
-    sine(50, changeRad());
 
-    System.out.println(displayvalue);
-    cosine(50, changeRad());
-    System.out.println(displayvalue);
-    cosine(50, changeRad());
-    System.out.println(displayvalue);
-    System.out.println(displayvalue);
-    */
 
     int operator;
     Double number1, number2, result;
@@ -53,26 +25,22 @@ public static void runScientfic () {
     //operator = input.nextInt();
     while (loop == true) {
         System.out.println("Choose an operator: \n1: is for main menu\n" +
-
-                "2: is forswitchDisplayMode() should rotate through the options\n" +
-                "3: is forswitchDisplayMode(String mode) should set the display to the mode given\n" +
-                "4: is for(M+ key) Add the currently displayed value to the value in memory (store in memory and update display) *\n" +
-                "5: is for(MC key) Reset memory *\n" +
-                "6: is for(MRC key) Recall the current value from memory to the display *\n" +
-                "7: is forSine - Calculate the sine of the displayed value and display it\n" +
-                "8: is forCosine - Calculate the cosine of the displayed value and display it\n" +
-                "9: is forTangent - Calculate the tangent of the displayed value and display it\n" +
-                "10: is forInverse Sine\n" +
-                "11: is forInverse Cosine\n" +
-                "12: is forInverse Tangent\n" +
-                "13: is forswitchUnitsMode() should rotate through the options\n" +
-                "14: is forswitchUnitsMode(String mode) should set the trig units to the type given\n" +
-                "15: is forLog\n" +
-                "16: is for10x (inverse logarithm)\n" +
-                "17: is forLn (natural logarithm)\n" +
-                "18: is forex (inverse natural logarithm)\n" +
-                "19: is forFactorial function\n"+
-                "20 is for main menu");
+                "2: is for(M+ key) Add the currently displayed value to the value in memory (store in memory and update display) *\n" +
+                "3: is for(MC key) Reset memory *\n" +
+                "4: is for(MRC key) Recall the current value from memory to the display *\n" +
+                "5: is forSine - Calculate the sine of the displayed value and display it\n" +
+                "6: is forCosine - Calculate the cosine of the displayed value and display it\n" +
+                "7: is forTangent - Calculate the tangent of the displayed value and display it\n" +
+                "8: is forInverse Sine\n" +
+                "9: is forInverse Cosine\n" +
+                "10: is forInverse Tangent\n" +
+                "11: is for rotates between radians and degrees \n" +
+                "12: is forLog\n" +
+                "13: is for10x (inverse logarithm)\n" +
+                "14: is forLn (natural logarithm)\n" +
+                "15: is forex (inverse natural logarithm)\n" +
+                "16: is forFactorial function\n"+
+                "Display Value is "+ displayvalue);
                 operator = input.nextInt();
         switch (operator) {
 
@@ -80,79 +48,71 @@ public static void runScientfic () {
             // operator addition for both numbers
             case 1:
                 MainApplication main = new MainApplication();
-                MainApplication.runMain();
+                main.runMain();
                 break;
             case 2:
-
-
+                memPlus();
                 break;
             case 3:
-
+                memClear();
                 break;
             case 4:
+                memRecall();
                 break;
             case 5:
-                break;
-            case 6:
-                break;
-            case 7:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 sine(number1,radTrueOrFalse);
                 break;
-            case 8:
+            case 6:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 cosine(number1,radTrueOrFalse);
                 break;
-            case 9:
+            case 7:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 tan(number1,radTrueOrFalse);
                 break;
-            case 10:
+            case 8:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 inverseSine(number1,radTrueOrFalse);
                 break;
-            case 11:
+            case 9:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 inverseCosine(number1,radTrueOrFalse);
                 break;
-            case 12:
+            case 10:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 inverseTan(number1,radTrueOrFalse);
                 break;
-            case 13:
+            case 11:
                 changeRad();
                 break;
-            case 14:
-
-
-                break;
-            case 15:
+            case 12:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 log(number1);
                 break;
-            case 16:
+            case 13:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 inverseLog(number1);
                 break;
-            case 17:
+            case 14:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 ln(number1);
                 break;
-            case 18:
+            case 15:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 inverseNaturalLog(number1);
                 break;
-            case 19:
+            case 16:
                 System.out.println("Choose first number");
                 number1 = input2.nextDouble();
                 factorial(number1);
@@ -173,6 +133,8 @@ public static boolean radTrueOrFalse = true;
     public static int i = 0;
     public static double displayvalue = 0.0;
 
+    public static double mem = 0.0;
+
     public static boolean changeRad() {
 
         if (i == 0) {
@@ -187,9 +149,21 @@ public static boolean radTrueOrFalse = true;
         }
         return radTrueOrFalse;
     }
+    public static double memPlus() {
+        mem=displayvalue;
 
+        return mem;
+    }
+    public static double memClear() {
+        mem=0.0;
 
+        return mem;
+    }
+    public static double memRecall() {
+        System.out.println("number on display "+mem+"\n");
+        return mem;
 
+    }
 
     public static double sine(double userInput,boolean rad) {
         //sin function user inputs number and checks if it's on radian mode or not
