@@ -31,10 +31,13 @@ public class MainApplication {
                     Scientific science=new Scientific();
                     science.runScientfic();
                     break;
-
-                default:
+                case '3':
                     System.out.println("Invalid operator!");
+                    SpecialClass dog=new SpecialClass();
+                    dog.printDog();
                     break;
+                default:
+
             }
 
         }
