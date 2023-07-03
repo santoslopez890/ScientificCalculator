@@ -12,12 +12,12 @@ public class MainApplication {
         public static void runMain(){
             Console.println("Welcome to our calculator!");
             char operator;
-            Double number1, number2, result;
 
             // create an object of Scanner class to get input from user
             Scanner input = new Scanner(System.in);
 
             // ask users to enter operator
+
             System.out.println("Choose an operator: 1 for core features, 2 for scientific, 3 for special,");
             operator = input.next().charAt(0);
             switch (operator) {
@@ -31,8 +31,7 @@ public class MainApplication {
                     Scientific science=new Scientific();
                     science.runScientfic();
                     break;
-                case '3':
-                    break;
+
                 default:
                     System.out.println("Invalid operator!");
                     break;

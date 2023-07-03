@@ -12,7 +12,7 @@ public static void runScientfic () {
 
 
     int operator;
-    Double number1, number2, result;
+    double number1;
     boolean loop=true;
 
     // create an object of Scanner class to get input from user
@@ -23,7 +23,7 @@ public static void runScientfic () {
     Scanner input = new Scanner(System.in);
     Scanner input2 = new Scanner(System.in);
     //operator = input.nextInt();
-    while (loop == true) {
+    while (loop) {
         System.out.println("Choose an operator: \n1: is for main menu\n" +
                 "2: is for(M+ key) Add the currently displayed value to the value in memory (store in memory and update display) *\n" +
                 "3: is for(MC key) Reset memory *\n" +
@@ -270,8 +270,8 @@ public static boolean radTrueOrFalse = true;
 
     public static double factorial(double userInput) {
 
-        double fact = userInput;
-        for (int i = 1; i <= fact; i++) {
+        double fact = 1;
+        for (int i = 1; i <= userInput; i++) {
             fact = fact * i;
 
         }
